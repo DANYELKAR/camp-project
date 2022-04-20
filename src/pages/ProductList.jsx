@@ -8,7 +8,7 @@ export default function ProductList() {
   useEffect(() => {
     let productService = new ProductService();
     productService.getProducts().then((result) => setProducts(result.data));
-  });
+  }, []);
 
   return (
     <div>
@@ -24,11 +24,11 @@ export default function ProductList() {
 
         <Table.Body>
           {products.map((product) => (
-            <Table.Row>
+            <Table.Row key={product.id}>
               <Table.Cell>{product.name}</Table.Cell>
               <Table.Cell>{product.price}</Table.Cell>
-              <Table.Cell>Cell</Table.Cell>
-              <Table.Cell>Cell</Table.Cell>
+              <Table.Cell>{product.description}</Table.Cell>
+              <Table.Cell>{product.category}</Table.Cell>
             </Table.Row>
           ))}
         </Table.Body>
