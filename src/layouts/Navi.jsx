@@ -3,12 +3,14 @@ import { Container, Menu } from "semantic-ui-react";
 import CartSummary from "./CartSummary";
 import { SignedIn } from "./SignedIn";
 import { SignOut } from "./SignOut";
+import { useNavigate } from "react-router-dom";
 
 export default function Navi() {
   const [isAuthenticated, setIsAuthenticated] = useState(true);
-
+  const navigate = useNavigate();
   function handleSignOut() {
     setIsAuthenticated(false);
+    navigate("/");
   }
   function handleSignIn() {
     setIsAuthenticated(true);
