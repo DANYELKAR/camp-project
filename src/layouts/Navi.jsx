@@ -7,10 +7,10 @@ import { SignOut } from "./SignOut";
 export default function Navi() {
   const [isAuthenticated, setIsAuthenticated] = useState(true);
 
-  function handleSignOut(params) {
+  function handleSignOut() {
     setIsAuthenticated(false);
   }
-  function handleSignIn(params) {
+  function handleSignIn() {
     setIsAuthenticated(true);
   }
 

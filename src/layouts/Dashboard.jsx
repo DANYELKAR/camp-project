@@ -2,8 +2,11 @@ import React from "react";
 import ProductList from "../pages/ProductList";
 import Categories from "./Categories";
 import { Grid, GridColumn, GridRow } from "semantic-ui-react";
+import { Route, Routes } from "react-router-dom";
+import { ProductDetail } from "../pages/ProductDetail";
+import { CartDetail } from "../pages/CartDetail";
 
-export const Dashboard = () => {
+export default function Dashboard() {
   return (
     <div>
       <Grid>
@@ -12,10 +15,15 @@ export const Dashboard = () => {
             <Categories />
           </GridColumn>
           <GridColumn width={12}>
-            <ProductList />
+            <Routes>
+              <Route exact path="/" element={<ProductList />} />
+              <Route exact path="/products" element={<ProductList />} />
+              <Route path="/products/:id" element={<ProductDetail />} />
+              <Route path="/products/cart" element={<CartDetail />} />
+            </Routes>
           </GridColumn>
         </GridRow>
       </Grid>
     </div>
   );
-};
+}
