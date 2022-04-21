@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Icon, Menu, Table } from "semantic-ui-react";
+import { Icon, Menu, Table, Image } from "semantic-ui-react";
 import ProductService from "../services/productService";
 
 export default function ProductList() {
