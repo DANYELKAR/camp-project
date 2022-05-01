@@ -8,6 +8,7 @@
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.26.1",
+    "formik": "^2.2.9",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-redux": "^8.0.1",
@@ -18,7 +19,8 @@
     "redux-devtools-extension": "^2.13.9",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.1.2",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yup": "^0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",
